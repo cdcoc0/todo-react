@@ -2,6 +2,6 @@
 A simple project using React manages to-do lists.
 
 ## Libraries
-node-sass
-classnames
-react-icons [참조 링크](https://react-icons.netlify.com/)
+- node-sass  
+- classnames  
+- react-icons [(https://react-icons.netlify.com/)](https://react-icons.netlify.com/)

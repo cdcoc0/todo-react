@@ -1,8 +1,8 @@
-import './App.css';
+import TodoTemplate from './components/TodoTemplate';
 
 const App = () => {
   return (
-    <div>Making Todo App😁</div>
+    <TodoTemplate>Making Todo App😁</TodoTemplate>
   )
 }
 

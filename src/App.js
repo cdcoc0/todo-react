@@ -30,25 +30,26 @@ const App = () => {
         text,
         checked: false,
       };
-      setTodos(todos.concat(todo)); // concat으로 복제한 뒤 set
+      setTodos(todos => todos.concat(todo)); // concat으로 복제한 뒤 set
       nextId.current += 1; // nextId 1씩 더하기
     }, 
-    [todos],
+    [],
   );
 
   const onRemove = useCallback(
     id => {
-      setTodos(todos.filter(todo => todo.id !== id));
-    }, [todos],
+      setTodos(todos => todos.filter(todo => todo.id !== id));
+    }, [],
   );
 
   const onToggle = useCallback(
     id => {
-      setTodos(todos.map(todo => 
-        todo.id === id ? {...todo, checked: !todo.checked} : todo,
-        ), //불변성을 유지하면서 특정 배열 원소를 업데이트할 때 map 함수 사용
+      setTodos(todos => 
+        todos.map(todo => 
+          todo.id === id ? {...todo, checked: !todo.checked} : todo,
+          ), //불변성을 유지하면서 특정 배열 원소를 업데이트할 때 map 함수 사용
       );
-    }, [todos],
+    }, [],
   );
 
   return (
